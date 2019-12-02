@@ -32,7 +32,6 @@ Vue.component('modal', {
             <button class="modal-close is-large" @click="$emit('close')" aria-label="close"></button>
         </div>
     `
-
     }  
 ); 
     
@@ -47,7 +46,7 @@ Vue.component('tabs', {
             </ul>
         </div>
         <div class="tabs-details">
-            <slot></slot>
+            <slot></slot>            <!-- This is where the tabs components content will go --> 
         </div>
     <div>
     `,
@@ -72,7 +71,7 @@ Vue.component('tabs', {
 
 Vue.component('tab', {
     template:`
-        <div  v-show="isActive">
+        <div class="dansclass" v-show="isActive">
             <slot></slot>
         </div>
     `,

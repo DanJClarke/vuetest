@@ -14,6 +14,8 @@
 </head>
 <body>
     <div id="root" class="container">
+
+        
         <tabs>
             <tab name="About Us" :selected="true">
                 <h1>Here is the content for the about us tab.</h1>
@@ -25,11 +27,13 @@
                 <h1>Here is the content for the about our vision tab.</h1>
             </tab>
         </tabs>
+
+
         <br>
         <br>
         <message  title="Hello World" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></message>
 
-        <modal v-if="showModal" @close="showModal = false" >
+        <modal v-show="showModal" @close="showModal = false" >
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </modal>
         <button @click='showModal = true'>Show Modal</button>
